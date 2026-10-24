@@ -38,6 +38,8 @@ static const unsigned short supported_ids[] = {
 	0x2544,
 	/* GA106M RTX 3060 Laptop/Max-Q */
 	0x2520, 0x2560,
+	/* AD103 (validated only on RTX 4080 SUPER 0x2702) */
+	0x2702,
 };
 
 /* A target card. Those unlocked at boot stay listed, with a reference, to be
@@ -227,4 +229,4 @@ module_init(gpu_unlock_init);
 module_exit(gpu_unlock_exit);
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("Ampere pre-driver BF16 unlock");
-MODULE_VERSION("1.0.0");
+MODULE_VERSION("1.1.0");
