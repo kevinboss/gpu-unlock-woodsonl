@@ -42,9 +42,9 @@ static const unsigned short supported_ids[] = {
 	0x2702,
 	/* AD106 (validated only on RTX 4060 Ti 8GB 0x2803) */
 	0x2803,
-	/* AD104, AD107M: community-reported with boot logs and benchmarks
-	 * (PR #24; issue #91) - keep in sync with gu_ad10x_ids */
-	0x2782, 0x28a0,
+	/* AD104, AD107M, non-SUPER AD103: community-reported with boot logs
+	 * and benchmarks (PR #24; issue #91) - keep in sync with gu_ad10x_ids */
+	0x2782, 0x28a0, 0x2704,
 };
 
 /* A target card. Those unlocked at boot stay listed, with a reference, to be
