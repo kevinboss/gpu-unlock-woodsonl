@@ -45,6 +45,7 @@ static const unsigned short supported_ids[] = {
 	/* AD104, AD107M, non-SUPER AD103: community-reported with boot logs
 	 * and benchmarks (PR #24; issue #91) - keep in sync with gu_ad10x_ids */
 	0x2782, 0x28a0, 0x2704,
+	0x2805, /* 4060 Ti 16GB: same AD106 die as 0x2803 (kevinboss, PR #24) */
 };
 
 /* A target card. Those unlocked at boot stay listed, with a reference, to be
