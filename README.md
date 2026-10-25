@@ -8,11 +8,14 @@ The benefit of this early kmod driver is that it does not require manual patchin
 
 The effect of this unlock is that it doubles the instruction issuing speed of FP/BF16 FMA into FP32 operations on GA102, GA103, GA104, GA106 and AD103 cards.
 
-AD103 (RTX 4080 SUPER) uses the AD10x payload chain published by
+AD103/AD104/AD106/AD107 (RTX 4080 SUPER, 4070 Ti, 4060 Ti, 4060 Laptop)
+use the AD10x payload chain published by
 [TOTORONG/AD103_win_unlocker](https://huggingface.co/TOTORONG/AD103_win_unlocker),
 which performs the four PLM writes in one Booter launch; the GA102 Booter
 halts on Ada without opening FEAT permissions. Boot log and before/after
 benchmarks for a 4080 SUPER are in `docs/evidence/rtx4080super/`.
+Laptops: disable runtime D3 (`NVreg_DynamicPowerManagement=0x00`) or the
+dGPU powers off when idle and the unlock reverts.
 
 [3090 Ti dense 8192³ GEMM at 450 W, five-sample medians with FP32 accumulation](https://github.com/Zagitta/gpu-unlock/issues/1#issue-5905622687):
 

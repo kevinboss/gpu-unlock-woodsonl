@@ -48,8 +48,12 @@
 
 static bool is_ad103(const struct pci_dev *pdev)
 {
-	return pdev->device == GU_AD103_RTX_4080_SUPER ||
-	       pdev->device == GU_AD106_RTX_4060_TI;
+	unsigned int i;
+
+	for (i = 0; i < ARRAY_SIZE(gu_ad10x_ids); i++)
+		if (pdev->device == gu_ad10x_ids[i])
+			return true;
+	return false;
 }
 
 struct unlock_assets {

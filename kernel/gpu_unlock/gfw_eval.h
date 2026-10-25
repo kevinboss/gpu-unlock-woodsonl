@@ -25,6 +25,14 @@ typedef uint32_t u32;
 /* FEATURE_READOUT_1: nine 3-bit effective speed fields; zero once every
  * override is in effect. */
 #define GU_FEAT_READOUT_1_OFFSET 0x00823818u
+
+/* Ada parts routed through the AD102 Booter archive (610.43.03 maps
+ * AD102/103/104/106/107 to the same Booter and GspRmBoot). Single list:
+ * main.c accepts these IDs, unlock_610.c picks the AD10x asset set.
+ *  - 0x2702 RTX 4080 SUPER, 0x2803 RTX 4060 Ti 8GB: tested by this PR
+ *  - 0x2782 RTX 4070 Ti, 0x28a0 RTX 4060 Laptop: community-reported
+ *    with boot logs and benchmarks in PR #24 (issue #91 for 0x28a0) */
+static const u16 gu_ad10x_ids[] = { 0x2702, 0x2803, 0x2782, 0x28a0 };
 #define GU_FEAT_SS1_OFFSET 0x00823820u
 #define GU_GFW_PLM_LEVEL0 0x1u
 #define GU_GFW_BOOT_COMPLETED 0xffu
