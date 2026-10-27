@@ -239,4 +239,4 @@ terms. See `firmware/NOTICE.md` and `licenses/` for attribution and notices.
 
 # Support me
 
-[https://buymeacoffee.com/zagitta](https://buymeacoffee.com/lancewoodson)  
+[https://buymeacoffee.com/lancewoodson](https://buymeacoffee.com/lancewoodson)  
