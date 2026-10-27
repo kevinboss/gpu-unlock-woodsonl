@@ -120,6 +120,10 @@ printf 'mok_signing_key=/etc/pki/akmods/private/private_key.priv\nmok_certificat
 `modinfo gpu_unlock | grep signer` should then print the same signer as
 `modinfo nvidia | grep signer`.
 
+- **Fedora Atomic (Silverblue, Kinoite, Bazzite):** `/usr` is read-only and
+`make install` does not apply; the module must also be signed with a key you
+enroll. See [Fedora Atomic and Secure Boot](docs/Fedora%20Atomic%20and%20Secure%20Boot.md).
+
 
 
 ## Local build
