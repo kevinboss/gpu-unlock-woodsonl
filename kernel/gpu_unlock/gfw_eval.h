@@ -33,8 +33,14 @@ typedef uint32_t u32;
  *  - 0x2805 is the 16 GB 0x2803 (same AD106 die)
  *  - 0x2704 RTX 4080, 0x2782 RTX 4070 Ti, 0x28a0 RTX 4060 Laptop:
  *    community-reported with boot logs and benchmarks in PR #24
- *    (issue #91 for 0x28a0) */
-static const u16 gu_ad10x_ids[] = { 0x2684, 0x2702, 0x2704, 0x2803, 0x2805, 0x2782, 0x28a0 };
+ *    (issue #91 for 0x28a0)
+ *  - 0x2705, 0x2709, 0x2757, 0x2783, 0x2786, 0x2882, 0x28e1: canary
+ *    reports at https://github.com/JustAResearcher/gpu-unlock-ada
+ *    (docs/ada-*.md; 0x2757 unlocks but throughput is unchanged) */
+static const u16 gu_ad10x_ids[] = {
+	0x2684, 0x2702, 0x2704, 0x2705, 0x2709, 0x2757,
+	0x2782, 0x2783, 0x2786, 0x2803, 0x2805, 0x2882, 0x28a0, 0x28e1,
+};
 #define GU_FEAT_SS1_OFFSET 0x00823820u
 #define GU_GFW_PLM_LEVEL0 0x1u
 #define GU_GFW_BOOT_COMPLETED 0xffu

@@ -47,6 +47,9 @@ static const unsigned short supported_ids[] = {
 	0x2782, 0x28a0, 0x2704,
 	0x2805, /* 4060 Ti 16GB: same AD106 die as 0x2803 (kevinboss, PR #24) */
 	0x2684, /* RTX 4090: jaw-sh + Oceanswave reports, PR #24 */
+	/* Canary reports at JustAResearcher/gpu-unlock-ada docs/ada-*.md:
+	 * keep in sync with gu_ad10x_ids */
+	0x2705, 0x2709, 0x2757, 0x2783, 0x2786, 0x2882, 0x28e1,
 };
 
 /* A target card. Those unlocked at boot stay listed, with a reference, to be

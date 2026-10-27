@@ -14,6 +14,8 @@ use the AD10x payload chain published by
 which performs the four PLM writes in one Booter launch; the GA102 Booter
 halts on Ada without opening FEAT permissions. Boot log and before/after
 benchmarks for a 4080 SUPER are in `docs/evidence/rtx4080super/`.
+FP8 tensor issue rate is subject to the same limiter and lifts with the
+selectors (matched stock/unlocked pairs in the gpu-unlock-ada evidence).
 Laptops: disable runtime D3 (`NVreg_DynamicPowerManagement=0x00`) or the
 dGPU powers off when idle and the unlock reverts.
 
