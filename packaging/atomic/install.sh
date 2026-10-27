@@ -71,8 +71,8 @@ command -v podman >/dev/null || die "podman is needed to build the RPM in a Fedo
 KCORE=$(rpm -q --qf '%{VERSION}-%{RELEASE}' kernel-core) || die "kernel-core is not installed?"
 [ "$KCORE.$(uname -m)" = "$KVER" ] || die "kernel-core $KCORE does not match the booted kernel $KVER. Reboot into the latest deployment first."
 
-if ! lspci -n 2>/dev/null | grep -qiE '10de:(22|24|25)[0-9a-f]{2}'; then
-    echo "warning: no GA102/GA103/GA104/GA106 card found by lspci; continuing anyway." >&2
+if ! lspci -n 2>/dev/null | grep -qiE '10de:(22|24|25|26|27|28)[0-9a-f]{2}'; then
+    echo "warning: no supported GA10x/AD10x card found by lspci; continuing anyway." >&2
 fi
 
 SB=off
